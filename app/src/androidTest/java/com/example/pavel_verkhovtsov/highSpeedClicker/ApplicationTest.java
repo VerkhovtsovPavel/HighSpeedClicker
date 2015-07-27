@@ -1,4 +1,4 @@
-package com.example.pavel_verkhovtsov.lesson9;
+package com.example.pavel_verkhovtsov.highSpeedClicker;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

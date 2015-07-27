@@ -1,12 +1,8 @@
 <resources>
-    <string name="app_name">Buttons</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">High-speed Clicker</string>
 
-    <string name="text1">First button clicked</string>
-    <string name="text2">Second button clicked</string>
-    <string name="text3">Third button clicked</string>
+    <string name="game_over">Game over! Yor score %s clicks</string>
 
-    <string name="textButton">4</string>
     <string name="title_activity_start">StartActivity</string>
 
     <string name="application_title">High-speed Clicker</string>
