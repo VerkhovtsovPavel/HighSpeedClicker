@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Click on button"
-        android:id="@+id/textView"
+        android:text="@string/timer_default_text"
+        android:id="@+id/timerTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
 
@@ -39,15 +39,15 @@
         android:text="3"
         android:id="@+id/button3"
         android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:onClick="thirdButtonClick"/>
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
+        android:text="@string/click_to_button_default_text"
         android:id="@+id/needClickTextView"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="41dp" />
+        android:layout_marginBottom="41dp"
+        android:textSize="32sp"/>
 </RelativeLayout>
