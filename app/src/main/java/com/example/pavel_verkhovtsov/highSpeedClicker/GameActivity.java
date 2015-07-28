@@ -1,7 +1,10 @@
 package com.example.pavel_verkhovtsov.highSpeedClicker;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
@@ -105,15 +108,6 @@ public class GameActivity extends Activity {
         timer.start();
     }
 
-    //TODO Move button horizontally by turn to turn
-   /* private void moveButtons()
-    {
-        Random rand = new Random();
-
-        button1.setLeft(rand.nextInt(300));
-    }*/
-
-
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -136,7 +130,7 @@ public class GameActivity extends Activity {
     public void gameOver() {
         Toast.makeText(GameActivity.this, String.format(getString(R.string.game_over_text), score), Toast.LENGTH_LONG).show();
         timer.cancel();
-        Intent intent = new Intent(GameActivity.this, StartActivity.class);
-        startActivity(intent);
+        StartActivity.score = score;
+        finish();
     }
 }

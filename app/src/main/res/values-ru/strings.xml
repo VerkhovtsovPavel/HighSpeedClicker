@@ -7,4 +7,6 @@
     <string name="click_to_button_default_text">Нажимай на …</string>
     <string name="start_button_text">Старт</string>
     <string name="game_over_text">Игра окончена! Твой счет %s</string>
+    <string name="saved_high_score" />
+    <string name="high_score_text" >Максимальный счет: </string>
 </resources>
