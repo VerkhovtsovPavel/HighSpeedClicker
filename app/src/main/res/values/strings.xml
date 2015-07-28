@@ -1,14 +1,9 @@
 <resources>
     <string name="app_name">High-speed Clicker</string>
-
-    <string name="game_over">Game over! Yor score %s clicks</string>
-
-    <string name="title_activity_start">StartActivity</string>
-
-    <string name="application_title">High-speed Clicker</string>
+    <string name="game_activity_title">Game</string>
     <string name="click_to">"Click to "</string>
     <string name="timer_default_text">Timer</string>
-    <string name="click_to_button_default_text">Click to ...</string>
+    <string name="click_to_button_default_text">Click to …</string>
     <string name="start_button_text">Start</string>
     <string name="game_over_text">Game over! You score %s clicks</string>
 </resources>

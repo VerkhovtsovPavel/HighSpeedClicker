@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,10 +16,10 @@ import java.util.Random;
 import static android.view.View.OnClickListener;
 
 //TODO Save best score
-//TODO Russian localization
+//TODO Check Russian localization
 public class GameActivity extends Activity {
 
-    private final int buttonCount = 3;
+    private final int buttonCount = 6;
     private final int secondPerTurn = 5;
 
     private static TextView timerTextView;
@@ -49,7 +50,7 @@ public class GameActivity extends Activity {
             button.setOnClickListener(onClickListener);
 
         if (savedInstanceState == null) {
-            timer = new CountDownTimer(secondPerTurn * 1000, 1000) {
+            timer = new CountDownTimer((secondPerTurn+1) * 1000, 1000) {
                 public void onTick(long millisUntilFinished) {
                     timerTextView.setText(String.valueOf(millisUntilFinished / 1000));
                 }
@@ -83,10 +84,14 @@ public class GameActivity extends Activity {
     }
 
     private void fillButtonsArray() {
+        LinearLayout buttonsLayout = (LinearLayout) findViewById(R.id.buttonLayout);
         buttons = new Button[buttonCount];
-        buttons[0] = (Button) findViewById(R.id.button1);
-        buttons[1] = (Button) findViewById(R.id.button2);
-        buttons[2] = (Button) findViewById(R.id.button3);
+        for(int i=0; i<buttonCount; i++) {
+            Button tButton = new Button(getApplicationContext());
+            tButton.setText(String.valueOf(i+1));
+            buttonsLayout.addView(tButton);
+            buttons[i]=tButton;
+        }
     }
 
     private void nextTurn() {
