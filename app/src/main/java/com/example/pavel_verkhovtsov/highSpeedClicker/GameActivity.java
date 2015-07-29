@@ -1,10 +1,7 @@
 package com.example.pavel_verkhovtsov.highSpeedClicker;
 
 import android.app.Activity;
-import android.app.Application;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
@@ -53,7 +50,7 @@ public class GameActivity extends Activity {
             button.setOnClickListener(onClickListener);
 
         if (savedInstanceState == null) {
-            timer = new CountDownTimer((secondPerTurn+1) * 1000, 1000) {
+            timer = new CountDownTimer((secondPerTurn + 1) * 1000, 1000) {
                 public void onTick(long millisUntilFinished) {
                     timerTextView.setText(String.valueOf(millisUntilFinished / 1000));
                 }
@@ -69,7 +66,7 @@ public class GameActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-       gameOver();
+        gameOver();
     }
 
     private OnClickListener createGameOnClickListener() {
@@ -89,11 +86,11 @@ public class GameActivity extends Activity {
     private void fillButtonsArray() {
         LinearLayout buttonsLayout = (LinearLayout) findViewById(R.id.buttonLayout);
         buttons = new Button[buttonCount];
-        for(int i=0; i<buttonCount; i++) {
+        for (int i = 0; i < buttonCount; i++) {
             Button tButton = new Button(getApplicationContext());
-            tButton.setText(String.valueOf(i+1));
+            tButton.setText(String.valueOf(i + 1));
             buttonsLayout.addView(tButton);
-            buttons[i]=tButton;
+            buttons[i] = tButton;
         }
     }
 
