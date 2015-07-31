@@ -1,4 +1,4 @@
-package com.example.pavel_verkhovtsov.highSpeedClicker;
+package com.example.pavel_verkhovtsov.highSpeedClicker.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,13 +9,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.pavel_verkhovtsov.highSpeedClicker.R;
+
 
 public class StartActivity extends Activity {
 
+    public static int score;
+    SharedPreferences sharedPref;
     private Button startButton;
     private TextView highScoreTextView;
-    SharedPreferences sharedPref;
-    public static int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class StartActivity extends Activity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, GameActivity.class);
+                Intent intent = new Intent(StartActivity.this, SelectModeActivity.class);
                 startActivity(intent);
             }
         });
@@ -45,12 +47,9 @@ public class StartActivity extends Activity {
         if (score > highScore) {
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putInt(getString(R.string.saved_high_score), score);
-            editor.commit();
+            editor.apply();
             highScore = score;
         }
         highScoreTextView.setText(getString(R.string.high_score_text) + highScore);
-
-
     }
-
 }

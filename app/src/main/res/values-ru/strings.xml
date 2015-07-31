@@ -9,4 +9,11 @@
     <string name="game_over_text">Игра окончена! Твой счет %s</string>
     <string name="saved_high_score" />
     <string name="high_score_text" >Максимальный счет: </string>
+
+    <string name="select_mode_text">Выбор режима</string>
+
+    <string name="title_activity_select_mode">Выберите режим</string>
+    <string name="number_mode_text">Режим чисел</string>
+    <string name="color_mode_text">Режим цветов</string>
+
 </resources>

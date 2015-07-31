@@ -8,4 +8,11 @@
     <string name="game_over_text">Game over! You score %s clicks</string>
     <string name="saved_high_score" />
     <string name="high_score_text" >High score:</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="select_mode_text">Select mode</string>
+
+    <string name="title_activity_select_mode">Select Mode</string>
+    <string name="number_mode_text">Number mode</string>
+    <string name="color_mode_text">Color mode</string>
 </resources>

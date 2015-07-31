@@ -8,19 +8,23 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.pavel_verkhovtsov.highSpeedClicker.StartActivity"
+            android:name=".activity.StartActivity"
             android:label="@string/app_name"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.pavel_verkhovtsov.highSpeedClicker.GameActivity"
+            android:name=".activity.GameActivity"
             android:label="@string/game_activity_title"
-            android:launchMode="singleTask">
-
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".activity.SelectModeActivity"
+            android:label="@string/title_activity_select_mode" >
         </activity>
     </application>
 
