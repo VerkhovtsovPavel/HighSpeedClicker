@@ -26,7 +26,7 @@ import static android.view.View.OnClickListener;
 public class GameActivity extends Activity {
 
     private final int buttonCount = 6;
-    private final int secondPerTurn = 55;
+    private final int secondPerTurn = 5;
 
     private static TextView timerTextView;
     private TextView needClickButtonTextView;

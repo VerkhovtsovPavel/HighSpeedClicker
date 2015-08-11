@@ -15,4 +15,5 @@
     <string name="title_activity_select_mode">Select Mode</string>
     <string name="number_mode_text">Number mode</string>
     <string name="color_mode_text">Color mode</string>
+    <string name="high_score_text_menu" />
 </resources>

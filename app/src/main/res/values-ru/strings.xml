@@ -15,5 +15,6 @@
     <string name="title_activity_select_mode">Выберите режим</string>
     <string name="number_mode_text">Режим чисел</string>
     <string name="color_mode_text">Режим цветов</string>
+    <string name="high_score_text_menu" />
 
 </resources>
